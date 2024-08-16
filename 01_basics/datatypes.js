@@ -7,7 +7,7 @@ const gid = Symbol('456') //id not = gid
 console.log(id === gid) //false
 
 
-// Referenve (non premitive)
+// Reference (non premitive)
 
 // Array , objects , functions
 
@@ -22,4 +22,26 @@ const myFunction = function (){
     console.log("Namste");
 }
 
-console.log(typeof )
+console.log(typeof myFunction )
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack (premitive copy), heap(non premi reff)
+
+let hobby = "coding"
+let nxthobby = hobby
+nxthobby = "drawing";
+console.log(nxthobby)
+
+console.log(hobby)
+
+let user ={
+    email : "user@gmail.com",
+    upi: "user@upi"
+}
+
+let user2 = user
+
+user2.email ="user@outlook.com"
+console.log(user.email)
+console.log(user.email)
