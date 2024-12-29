@@ -1,0 +1,62 @@
+// Global Scope
+// Variables declared outside of any function or block have global scope
+var globalVar = "I am a global variable";
+
+function globalScopeExample() {
+    console.log(globalVar); // Accessible here
+}
+
+globalScopeExample();
+console.log(globalVar); // Accessible here too
+
+// Function Scope
+// Variables declared within a function are local to that function
+function functionScopeExample() {
+    var localVar = "I am a local variable";
+    console.log(localVar); // Accessible here
+}
+
+functionScopeExample();
+// console.log(localVar); // Uncaught ReferenceError: localVar is not defined
+
+// Block Scope
+// Variables declared with let or const within a block are local to that block
+function blockScopeExample() {
+    if (true) {
+        let blockVar = "I am a block-scoped variable";
+        const blockConst = "I am also block-scoped";
+        console.log(blockVar); // Accessible here
+        console.log(blockConst); // Accessible here
+    }
+    // console.log(blockVar); // Uncaught ReferenceError: blockVar is not defined
+    // console.log(blockConst); // Uncaught ReferenceError: blockConst is not defined
+}
+
+blockScopeExample();
+
+// Lexical Scope
+// Inner functions have access to variables from their outer functions
+function outerFunction() {
+    var outerVar = "I am an outer variable";
+
+    function innerFunction() {
+        console.log(outerVar); // Accessible here due to lexical scope
+    }
+
+    innerFunction();
+}
+
+outerFunction();
+
+// Closures
+// A closure is a function that retains access to its outer scope even after the outer function has returned
+function closureExample() {
+    var closureVar = "I am a closure variable";
+
+    return function() {
+        console.log(closureVar); // Accessible here due to closure
+    };
+}
+
+var myClosure = closureExample();
+myClosure(); // Outputs: I am a closure variable
