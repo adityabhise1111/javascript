@@ -23,10 +23,10 @@
 //     let username= "gitesh"
 //     console.log(this.username )    
 // }
-const chai = () =>{
-    let username= "gitesh"
-    console.log(this)    
-}
+// const chai = () =>{
+//     let username= "gitesh"
+//     console.log(this)    
+// }
 // chai() 
 
 
@@ -36,12 +36,36 @@ const chai = () =>{
 // }
 
 
-const addtwo = (a, b) => a+b //implicit return 
+// const addtwo = (a, b) => a+b //implicit return 
 
-const two = (a, b) => {return a+b}
+// const two = (a, b) => {return a+b}
 
-const tow = (a, b) => ({a+b})
-console.log(tow(2,3))
+//const tow = (a, b) => ({a+b}) not valid
+
+//const tow = (a, b) => ({sum: a+b})//valid
+
+//const tow = (a, b) => {a+b}// undefined
+// console.log(tow(2,3))
+
+// const myarr= [1,2,3,4,5]
+
+// myarr.forEach(function (item){console.log(item)})
+//both are same
+// myarr.forEach((item)=>{console.log(`${item}`)})
 
 
+//IIFE --immediately invoked function expression
 
+//named iife
+(function sayhello(){
+    console.log("Hello")
+})();
+// semicolon is must after IIFE function
+
+//     ()          ()
+//  funciton      executioncall
+// to prevent global scopes pollution iife is used
+
+((name)=>{
+    console.log(`Hellow ${name}`)
+})('aditya')
