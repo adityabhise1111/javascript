@@ -29,3 +29,47 @@
     </div>
 </body>
 </html>
+
+//document.getElementById('title').Id
+//document.getElementById('title').className
+//document.getElementById('title').Id
+//document.getElementById('title').getAttribute('class')//any atribute
+//document.getElementById('title').setAttribute('class','test')//set any atribute
+//we can save it in const
+//const title = document.getElementById('title')
+//title.style.backgroundColor = 'red'
+//title.style.padding = '10px'
+//  title.style.borderradius = '10px'
+//title.textContent //
+//title.innerText
+//title.innerContent
+//difference is innerText gives the text only and innerContent gives the text hidden by tags also
+//innnerHTML gives the text with tags
+
+//moslty used selectors
+//document.querySelector('h1')//first element
+//document.querySelector('.heading')//class
+//document.querySelector('#title')//id
+//document.querySelector('h1 span')//nested element
+
+
+//
+//document.querySelectorAll('h1')//all elements
+//querySelectorAll gives a nodelist which is not an array 
+//but we can use forEach on it cant use map or filter
+//to convert it into array we can use Array.from()
+
+//while using querySelectorAll we cant change the style of all elements at once
+//we have to use forEach to change the style of all elements
+//or we select each element by index
+//document.querySelectorAll('h2')[0].style.color = 'red'
+
+<!--
+| Method          | Description                                                                 | Example                                                                                     |
+|-----------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| textContent     | Gets or sets the text content of the specified node and its descendants.    | document.getElementById('title').textContent = 'New Title';                                 |
+| innerText       | Gets or sets the visible text content of a node and its descendants.        | document.getElementById('title').innerText = 'New Title';                                   |
+| innerHTML       | Gets or sets the HTML or XML markup contained within the element.           | document.getElementById('title').innerHTML = 'New <span>Title</span>';                      |
+| outerHTML       | Gets or sets the HTML or XML markup of the element including its content.   | document.getElementById('title').outerHTML = '<h1 id="title">New Title</h1>';               |
+| innerContent    | Not a standard property. Likely a typo or misunderstanding.                 | N/A                                                                                         |
+-->

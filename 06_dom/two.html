@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">mon</div>
+        <div class="day">tues</div>
+        <div class="day">wed</div>
+        <div class="day">fri</div>
+    </div>
+    
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);//gives a html collection its not an array but we can use forEach on it
+    console.log(parent.children[0]);//gives the first element
+    console.log(parent.children[0].style);//gives the style of the first element
+    console.log(parent.children[0].innerHTML);
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+    }
+    console.log(parent.firstElementChild);
+    //gives the first element
+    console.log(parent.lastElementChild);
+
+    const days =document.querySelectorAll('.day');
+    console.log(days);//gives a nodelist 
+    console.log(parent.childNodes);//gives a nodelist
+    console.log(days)
+    console.log(days.parentElement);//gives the parent element  
+    console.log(days.nextSibling);//gives the next sibling
+
+
+</script>
+</html>
