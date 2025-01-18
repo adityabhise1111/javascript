@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html dom</title>
+ </head>
+ <body style="background-color:#212121; color: aliceblue;">
+    <ul class="lang">
+        <li>
+            javascript
+        </li>
+    </ul>
+    
+ </body>
+ <script>
+    function addlang(language){
+        const list = document.createElement('li');
+        list.innerHTML=`${language}`;
+        const ul = document.querySelector('.lang');
+        ul.appendChild(list);
+        
+    }
+    addlang('python');
+    
+    const prog_lang=['java','c++','c#','php','ruby',
+        'perl','swift','kotlin','dart','go','rust',
+        'scala','r','typescript','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell',
+        'bash','sql','html','css','javascript',
+        'typescript','coffeescript','lua','perl','ruby',
+        'python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua',
+        'perl','ruby','python','php','c','c++','c#','java','kotlin',
+        'swift','dart','go','rust','scala','r','shell','powershell',
+        'bash','sql','html','css','javascript','typescript','coffeescript',
+        'lua','perl','ruby','python','php','c','c++','c#','java',
+        'kotlin','swift','dart','go','rust','scala','r',
+        'shell','powershell','bash','sql','html','css'];
+
+        prog_lang.forEach(
+            (lang)=>{addlang(lang)}
+        )
+ </script>
+ </html>
