@@ -14,30 +14,55 @@
     
  </body>
  <script>
-    function addlang(language){
+    function addlan(language){
         const list = document.createElement('li');
         list.innerHTML=`${language}`;
         const ul = document.querySelector('.lang');
         ul.appendChild(list);
         
     }
-    addlang('python');
-    
-    const prog_lang=['java','c++','c#','php','ruby',
-        'perl','swift','kotlin','dart','go','rust',
-        'scala','r','typescript','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell',
-        'bash','sql','html','css','javascript',
-        'typescript','coffeescript','lua','perl','ruby',
-        'python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua',
-        'perl','ruby','python','php','c','c++','c#','java','kotlin',
-        'swift','dart','go','rust','scala','r','shell','powershell',
-        'bash','sql','html','css','javascript','typescript','coffeescript',
-        'lua','perl','ruby','python','php','c','c++','c#','java',
-        'kotlin','swift','dart','go','rust','scala','r',
-        'shell','powershell','bash','sql','html','css'];
 
-        prog_lang.forEach(
-            (lang)=>{addlang(lang)}
-        )
+    function addlang(language){
+        const list = document.createElement('li');
+        const addText=document.createTextNode(language);
+        list.appendChild(addText);
+        const ul = document.querySelector('.lang');
+        ul.appendChild(list);
+        
+    }
+    addlan('python');
+    
+    // const prog_lang=['java','c++','c#','php','ruby',
+    //     'perl','swift','kotlin','dart','go','rust',
+    //     //'scala','r','typescript','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua','perl','ruby','python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell',
+    //     'bash','sql','html','css','javascript',
+    //    // 'typescript','coffeescript','lua','perl','ruby',
+    //     'python','php','c','c++','c#','java','kotlin','swift','dart','go','rust','scala','r','shell','powershell','bash','sql','html','css','javascript','typescript','coffeescript','lua',
+    //     'perl','ruby','python','php','c','c++','c#','java','kotlin',
+    //     //'swift','dart','go','rust','scala','r','shell','powershell',
+    //     //'bash','sql','html','css','javascript','typescript','coffeescript',
+    //     //'lua','perl','ruby','python','php','c','c++','c#','java',
+    //     //'kotlin','swift','dart','go','rust','scala','r',
+    //     'shell','powershell','bash','sql','html','css'];
+
+    //     prog_lang.forEach(
+    //         (lang)=>{addlang(lang)}
+    //     )
+
+    const edit2nd= document.querySelector('li:nth-child(2)');
+    //edit2nd.innerHTML='c++'; 
+    const newli = document.createElement('li');
+    newli.textContent='c++';
+    edit2nd.replaceWith(newli);
+
+
+    //edit
+    const edit1st = document.querySelector('li:first-child');
+    edit1st.outerHTML ='<li>java</li>';
+
+    //remove
+    const remove = document.querySelector('li:last-child');
+    remove.remove();
+
  </script>
  </html>
