@@ -1,2 +1,3 @@
 Js is a Synchronous language 
 Single threaded
+
