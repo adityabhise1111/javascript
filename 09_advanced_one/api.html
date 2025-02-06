@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<h1>helow</h1>
+<body style="background-color: #212121;">
+<h1 >helow</h1>
 
 <script>
-    const body= document.querySelector('body');
+    const requestUrl='https://api.github.com/users/adiityaa-nikam';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange= function(){
+        
+    console.log(xhr.readyState);
+    
+
+   
+    if(xhr.readyState ===4){
+        const data  = JSON.parse(this.responseText)
+        const body= document.querySelector('body')
+        const card= document.createElement('div')
+        card.style.height='50%'
+        card.style.width='50%'
+        card.style.backgroundColor = '#333';
+        card.style.color = 'white';
+        card.style.borderRadius = '10px';
+        card.style.textAlign = 'center';
+
+        const name= document.createElement('h2');
+        name.innerText=data.name || 'No Name Available'
+
+        const img = document.createElement('img');
+        img.src=data.avatar_url;
+        img.style.height='5cm';
+
+        const follower= document.createElement('p');
+        name.innerText= `Followers :- ${data.followers || 'No Data Available'}`;
+
+
+
+
+        //without json gives stirng need to convert to  object
+        console.log(data.followers)
+        card.appendChild(img)
+        card.appendChild(name)
+        card.appendChild(follower)
+        body.appendChild(card)
+    }
+    };
+    xhr.send()
+    
+
+    
     
 </script>
     
